@@ -48,9 +48,33 @@ main() {
   lenguajes.shuffle();
   print(lenguajes);
 
+  var lenguajesSet = lenguajes.toSet();
+  print(lenguajesSet);
+
   imprimirLenguajes(lenguajes);
 
   //Sets
+  Set<String> villanos = <String>{
+    "Thanos",
+    "Loki",
+    "Ultron",
+    "Green Goblin",
+    "Doctor Octopus",
+  };
+
+  villanos.add("Venom");
+  villanos.add("Green Goblin"); // No se agrega porque ya existe
+
+  print(villanos);
+
+  //Mapas
+  Map<String, dynamic> ironman = {
+    "nombre": "Tony Stark",
+    "edad": 45,
+    "esAvenger": true,
+    "peliculas": ["Iron Man", "Iron Man 2", "Iron Man 3", "The Avengers"],
+  };
+  print(ironman);
 }
 
 void imprimirLenguajes(List<String> lenguajes) {
